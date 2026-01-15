@@ -5,13 +5,17 @@
  */
 function calculateRentalCost(days) {
   const OneDayPay = 40;
+  const LongTerm = 7;
+  const LongTermDiscount = 50;
+  const MediumTerm = 3;
+  const MediumTermDiscount = 20;
 
-  if (days >= 7) {
-    return days * OneDayPay - 50;
+  if (days >= LongTerm) {
+    return days * OneDayPay - LongTermDiscount;
   }
 
-  if (days >= 3) {
-    return days * OneDayPay - 20;
+  if (days >= MediumTerm) {
+    return days * OneDayPay - MediumTermDiscount;
   }
 
   return days * OneDayPay;
